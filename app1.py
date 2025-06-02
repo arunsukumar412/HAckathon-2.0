@@ -188,8 +188,6 @@ def login_form():
         try:
             logo = Image.open("algo.png")
             st.image(logo, width=150)
-            l = Image.open("1748583695432.png")
-            st.image(l, width=200)
         except FileNotFoundError:
             st.markdown("""
             <div style="margin-bottom:10px">
