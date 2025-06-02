@@ -48,55 +48,10 @@ Explanation: '?' matches 'c', but the second character is 'a' which does not mat
                 },
                 "solution": "",
                 "solved": False,
-                "max_score": 40
+                "max_score": 60
             },
             {
                 "id": 2,
-                "title": "Circular Array Loop",
-                "description": """
-You are playing a game involving a circular array of non-zero integers nums. 
-Each nums[i] denotes the number of indices forward/backward you must move if you are located at index i:
-- If nums[i] is positive, move forward nums[i] steps.
-- If nums[i] is negative, move backward nums[i] steps.
-
-A cycle in the array is defined by a sequence of indices seq where:
-- Following the movement rules results in a repeating sequence
-- The cycle length is > 1
-- All movements in the cycle must follow a single direction
-
-Return true if there is a cycle in nums, and false otherwise.
-
-**Constraints:**
-- 1 <= nums.length <= 5000
-- -1000 <= nums[i] <= 1000
-- nums[i] != 0
-
-**Example 1:**
-Input: nums = [2,-1,1,2,2]
-Output: true
-Explanation: There is a cycle (0 -> 2 -> 3 -> 0) with all positive movements.
-
-**Example 2:**
-Input: nums = [-1,2]
-Output: false
-Explanation: The sequence (0 -> 1 -> 0) has a negative movement and a positive movement.
-
-**Example 3:**
-Input: nums = [-2,1,-1,-2,-2]
-Output: false
-Explanation: The sequence (0 -> 1 -> 2 -> 0) has a negative movement and a positive movement.
-                """,
-                "difficulty": "Medium",
-                "example": {
-                    "input": "nums = [2,-1,1,2,2]",
-                    "output": "true"
-                },
-                "solution": "",
-                "solved": False,
-                "max_score": 40
-            },
-            {
-                "id": 3,
                 "title": "Excel Sheet Column Title",
                 "description": """
 Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.
@@ -133,7 +88,7 @@ Output: "ZY"
                 },
                 "solution": "",
                 "solved": False,
-                "max_score": 20
+                "max_score": 40
             }
         ]
     
@@ -282,7 +237,7 @@ def show_problem(problem):
 # Thank you page
 def thank_you_page():
     st.balloons()
-    st.title("🎉 Challenge Completed! 🎉")
+    st.title("🎉 Challenge Completed! �")
     st.subheader(f"Congratulations {st.session_state.username}!")
     
     end_time = time.time()
@@ -296,7 +251,7 @@ def thank_you_page():
     
     st.markdown(f"""
     <div style="background:#0e1a40;padding:30px;border-radius:15px;margin:20px 0">
-        <h2 style="color:white;text-align:center">You solved all 3 problems in {int(minutes)}m {int(seconds)}s!</h2>
+        <h2 style="color:white;text-align:center">You solved all 2 problems in {int(minutes)}m {int(seconds)}s!</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -448,7 +403,7 @@ def admin_dashboard():
         st.markdown(f"**Time remaining for {selected_user}:** `{time_left}`")
     
     col1, col2 = st.columns(2)
-    col1.metric("Problems Solved", f"{solved_count}/3")
+    col1.metric("Problems Solved", f"{solved_count}/2")
     col2.metric("Total Score", f"{user_data.get('total_score', 0)}/100")
     
     # Show problems and solutions
